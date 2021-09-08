@@ -11,7 +11,7 @@
 
         <div class="container">
             <div class="text-center" style="margin-bottom:0">
-             <h1>Bienvenido<br/>al programa<br/>Ciudadano de 4 patas</h1>
+             <h1>Bienvenido<br/>al Programa<br/>Ciudadano de 4 Patas</h1>
              <p> Una campaña para identificar a todos
                 estos miembros de nuestras familias como “Ciudadanos de 4 Patas”. Mediante un
                 microchip que emite una radiofrecuencia, es posible identificar, registrar y realizar
@@ -108,29 +108,87 @@
                         <input id="petsave-button"  type="button" class="btn btn-outline-success" value="Guardar"/>
                         <input id="petclean-button" type="button" class="btn btn-outline-danger"value="Limpiar" />
                     </form>
-
-                    <div>
-                        <table class="table">
-                            <thead class="thead-dark">
-                            <tr>
-                                <th class="column-header">Fecha de registro</th>
-				                <th class="column-header">Nombre del propietario</th>
-			                	<th class="column-header">Nombre de la mascota</th>
-			                	<th class="column-header">Edad</th>
-			                	<th class="column-header">Especie</th>
-			                	<th class="column-header">Tamaño</th>
-			                	<th class="column-header">Acciones</th>
-                            </tr>
-                            </thead>
-                        </table>
-                    </div>
                 </div>
 
                 <div class="col-sm-4">
-                   <img id="dogimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+                   <img id="dogimage" src="https://cdn2.thecatapi.com/images/N1VNIP3bN.jpg" class="rounded" alt="Cinque Terre" width="304" height="236"> 
                    <br/><br/>
-                   <img id="catimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236">  
-               </div>
+                   <img id="catimage" src="https://images.dog.ceo/breeds/retriever-golden/n02099601_3004.jpg" class="rounded" alt="Cinque Terre" width="304" height="236">  
+                </div>
+
             </div>
+           
+        </div>
+        <br/><br/>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3">
+                    <div class="container">
+                        <br/><br/><br/><br/><br/><br/>
+                        <p>Filtros</p>
+                        <br/><br/>
+                        Especie <select id="filterespecies-input">
+                            <option>Seleccione</option>
+                            <option>Perro</option>
+                            <option>Gato</option>	
+                        </select>
+                        <br/><br/>
+                        Sexo <select id="filtersex-input">
+                            <option>Seleccione</option>
+                            <option>Macho</option>
+                            <option>Hembra</option>	
+                        </select>
+                        <br/><br/>
+                        Tamaño <select id="filtersize-input">
+                            <option>Seleccione</option>
+                            <option>Miniatura</option>
+                            <option>Pequeño</option>
+                            <option>Mediano</option>
+                            <option>Grande</option>
+                        </select>
+                        <br/><br/>
+                        Microchip <select id="filtermicrochip-input">
+                            <option>Seleccione</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <br/><br/>
+                        Peligroso <select id="filterdangeruos-input">
+                            <option>Seleccione</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <br/><br/>
+                        Esterilizado <select id="filteresterilizado-input">
+                            <option>Seleccione</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <br/>
+                    </div>
+                </div>
+                <div class="table-responsive col-sm-9">
+                    <table class="table table-hover">
+                        <thead class="thead-dark ">
+                            <tr>
+                                <th class="column-header">Foto</th>
+                                <th class="column-header">Fecha de registro</th>
+                                <th class="column-header">Nombre del propietario</th>
+                                <th class="column-header">Nombre de la mascota</th>
+                                <th class="column-header">Numero de Microchip de la mascota</th>
+                                <th class="column-header">Edad</th>
+                                <th class="column-header">Especie</th>
+                                <th class="column-header">Sexo</th>
+                                <th class="column-header">Tamaño</th>
+                                <th class="column-header">Peligroso</th>
+                                <th class="column-header">Esterilizado</th>
+                                <th class="column-header">Localidad</th>
+                                <th class="column-header">Acciones</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
