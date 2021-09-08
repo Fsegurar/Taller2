@@ -1,0 +1,136 @@
+<html>
+
+    <head>
+        <title>Ciudadano de 4 patas</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <div class="text-center" style="margin-bottom:0">
+             <h1>Bienvenido<br/>al programa<br/>Ciudadano de 4 patas</h1>
+             <p> Una campaña para identificar a todos
+                estos miembros de nuestras familias como “Ciudadanos de 4 Patas”. Mediante un
+                microchip que emite una radiofrecuencia, es posible identificar, registrar y realizar
+                seguimiento a todas nuestras mascotas</p>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <a class="navbar-brand" >Ciudadano de 4 Patas</a>
+            <b class="text-secondary">Este es el formulario que debe diligenciar para registrar una nueva mascota</b>
+        </nav>
+
+        <div class="container" style="margin-top:30px">
+           
+            <div class="row">
+               
+                <div class="col-sm-8">
+                   
+                    <form class="form-inline" action="/action_page.php">
+                        <label for="date" class="mb-2 mr-sm-2">Fecha de registro:</label>
+                        <input id="date-input" type="date" class="form-control mb-2 mr-sm-2" name="fecha"/>
+                        <label for="name" class="mb-2 mr-sm-2"> Nombre del propietario:</label>
+                        <input id="owner-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Nombre del propietario" name="name"/>
+                        <label for="petname" class="mb-2 mr-sm-2"> Nombre de la mascota:</label>
+                        <input id="petname-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Nombre de la mascota" name="petname"/>
+                        <label for="microchip" class="mb-2 mr-sm-2"> Numero de Microchip de la mascota:</label>
+                        <input id="petmicrochip-input" type="number" min="0" class="form-control mb-2 mr-sm-2" placeholder="Microchip" name="petname"/>
+                        <label for="age" class="mb-2 mr-sm-2">Edad de la mascota:</label>
+                        <input id="petage-input" type="number" min="0" max="25" class="form-control mb-2 mr-sm-2" placeholder="Edad de la mascota" name="age"/>
+                        <label for="espcies" class="mb-2 mr-sm-2">Especie:</label>                                
+                        <select id="petspecies-input">
+                            <option>Seleccione</option>
+                            <option>Perro</option>
+                            <option>Gato</option>	
+                        </select>
+                        <label for="raza" class="mb-2 mr-sm-2">Raza:</label>                                
+                        <select id="dograza-input" disabled="disabled">
+                            <option>Seleccione</option>	
+                        </select>
+                        <select id="catraza-input" disabled="disabled">
+                            <option>Seleccione</option>	
+                        </select>
+                        <label for="sex" class="mb-2 mr-sm-2">Sexo:</label>                                
+                        <select id="petsex-input">
+                            <option>Seleccione</option>
+                            <option>Macho</option>
+                            <option>Hembra</option>	
+                        </select>
+                        <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
+                        <select id="petsize-input">
+                            <option>Seleccione</option>
+                            <option>Miniatura</option>
+                            <option>Pequeño</option>
+                            <option>Mediano</option>
+                            <option>Grande</option>
+                        </select>
+                        <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
+                        <select id="dangerous-input">
+                            <option>Seleccione</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <label for="esterilizado" class="mb-2 mr-sm-2">Esterilizado:</label>
+                        <select id="esterilizado-input">
+                            <option>Seleccione</option>
+                            <option>Si</option>
+                            <option>No</option>
+                        </select>
+                        <label for="neightbor" class="mb-2 mr-sm-2">Localidad:</label>
+                        <select id="neightbor-input">
+                            <option>Seleccione</option>
+                            <option>A. NARINO</option>
+                            <option>B. UNIDOS</option>
+                            <option>BOSA</option>
+                            <option>C. BOLIVAR</option>
+                            <option>CHAPINERO</option>
+                            <option>ENGATIVA</option>
+                            <option>FONTIBON</option>
+                            <option>KENNEDY</option>
+                            <option>LA CANDELARIA</option>
+                            <option>LOS MARTIRES</option>
+                            <option>P. ARANDA</option>
+                            <option>R. URIBE</option>
+                            <option>SAN CRISTOBAL</option>
+                            <option>SANTA FE</option>
+                            <option>SUBA</option>
+                            <option>SUMAPAZ</option>
+                            <option>TEUSAQUILLO</option>
+                            <option>TUNJUELITO</option>
+                            <option>USAQUEN</option>
+                            <option>USME</option>
+                        </select>
+                        <br/><br/>
+                        <input id="petsave-button"  type="button" class="btn btn-outline-success" value="Guardar"/>
+                        <input id="petclean-button" type="button" class="btn btn-outline-danger"value="Limpiar" />
+                    </form>
+
+                    <div>
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th class="column-header">Fecha de registro</th>
+				                <th class="column-header">Nombre del propietario</th>
+			                	<th class="column-header">Nombre de la mascota</th>
+			                	<th class="column-header">Edad</th>
+			                	<th class="column-header">Especie</th>
+			                	<th class="column-header">Tamaño</th>
+			                	<th class="column-header">Acciones</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                   <img id="dogimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+                   <br/><br/>
+                   <img id="catimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236">  
+               </div>
+            </div>
+    </body>
+</html>
