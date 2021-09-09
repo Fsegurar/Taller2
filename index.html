@@ -27,95 +27,142 @@
         <div class="container" style="margin-top:30px">
            
             <div class="row">
-               
-                <div class="col-sm-8">
-                   
-                    <form class="form-inline" action="/action_page.php">
-                        <label for="date" class="mb-2 mr-sm-2">Fecha de registro:</label>
-                        <input id="date-input" type="date" class="form-control mb-2 mr-sm-2" name="fecha"/>
-                        <label for="name" class="mb-2 mr-sm-2"> Nombre del propietario:</label>
-                        <input id="owner-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Nombre del propietario" name="name"/>
-                        <label for="petname" class="mb-2 mr-sm-2"> Nombre de la mascota:</label>
-                        <input id="petname-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Nombre de la mascota" name="petname"/>
-                        <label for="microchip" class="mb-2 mr-sm-2"> Numero de Microchip de la mascota:</label>
-                        <input id="petmicrochip-input" type="number" min="0" class="form-control mb-2 mr-sm-2" placeholder="Microchip" name="petname"/>
-                        <label for="age" class="mb-2 mr-sm-2">Edad de la mascota:</label>
-                        <input id="petage-input" type="number" min="0" max="25" class="form-control mb-2 mr-sm-2" placeholder="Edad de la mascota" name="age"/>
-                        <label for="espcies" class="mb-2 mr-sm-2">Especie:</label>                                
-                        <select id="petspecies-input">
-                            <option>Seleccione</option>
-                            <option>Perro</option>
-                            <option>Gato</option>	
-                        </select>
-                        <label for="raza" class="mb-2 mr-sm-2">Raza:</label>                                
-                        <select id="dograza-input" disabled="disabled">
-                            <option>Seleccione</option>	
-                        </select>
-                        <select id="catraza-input" disabled="disabled">
-                            <option>Seleccione</option>	
-                        </select>
-                        <label for="sex" class="mb-2 mr-sm-2">Sexo:</label>                                
-                        <select id="petsex-input">
-                            <option>Seleccione</option>
-                            <option>Macho</option>
-                            <option>Hembra</option>	
-                        </select>
-                        <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
-                        <select id="petsize-input">
-                            <option>Seleccione</option>
-                            <option>Miniatura</option>
-                            <option>Pequeño</option>
-                            <option>Mediano</option>
-                            <option>Grande</option>
-                        </select>
-                        <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
-                        <select id="dangerous-input">
-                            <option>Seleccione</option>
-                            <option>Si</option>
-                            <option>No</option>
-                        </select>
-                        <label for="esterilizado" class="mb-2 mr-sm-2">Esterilizado:</label>
-                        <select id="esterilizado-input">
-                            <option>Seleccione</option>
-                            <option>Si</option>
-                            <option>No</option>
-                        </select>
-                        <label for="neightbor" class="mb-2 mr-sm-2">Localidad:</label>
-                        <select id="neightbor-input">
-                            <option>Seleccione</option>
-                            <option>A. NARINO</option>
-                            <option>B. UNIDOS</option>
-                            <option>BOSA</option>
-                            <option>C. BOLIVAR</option>
-                            <option>CHAPINERO</option>
-                            <option>ENGATIVA</option>
-                            <option>FONTIBON</option>
-                            <option>KENNEDY</option>
-                            <option>LA CANDELARIA</option>
-                            <option>LOS MARTIRES</option>
-                            <option>P. ARANDA</option>
-                            <option>R. URIBE</option>
-                            <option>SAN CRISTOBAL</option>
-                            <option>SANTA FE</option>
-                            <option>SUBA</option>
-                            <option>SUMAPAZ</option>
-                            <option>TEUSAQUILLO</option>
-                            <option>TUNJUELITO</option>
-                            <option>USAQUEN</option>
-                            <option>USME</option>
-                        </select>
-                        <br/><br/>
-                        <input id="petsave-button"  type="button" class="btn btn-outline-success" value="Guardar"/>
-                        <input id="petclean-button" type="button" class="btn btn-outline-danger"value="Limpiar" />
-                    </form>
-                </div>
+               <div class="container">
+                    <div class="col-sm-6">
+                    
+                        <form class="needs-validation"   novalidate>
+                            <div class="form-group">
+                                <label for="date" class="mb-2 mr-sm-2">Fecha de registro:</label>
+                                <input id="date-input" type="date" class="form-control mb-2 mr-sm-2" name="fecha"required/>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="name" class="mb-2 mr-sm-2"> Nombre del propietario:</label>
+                                <input id="owner-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Nombre del propietario" name="name"required/>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="petname" class="mb-2 mr-sm-2"> Nombre de la mascota:</label>
+                                <input id="petname-input" type="text" class="form-control mb-2 mr-sm-2" placeholder="Nombre de la mascota" name="petname"required/>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            
+                            <label for="microchip" class="mb-2 mr-sm-2"> Numero de Microchip de la mascota:</label>
+                            <input id="petmicrochip-input" type="number" min="0" class="form-control mb-2 mr-sm-2" placeholder="Microchip" name="petname"/>
 
+                            <div class="form-group">
+                                <label for="age" class="mb-2 mr-sm-2">Edad de la mascota:</label>
+                                <input id="petage-input" type="number" min="0" max="25" class="form-control mb-2 mr-sm-2" placeholder="Edad de la mascota" name="age"required/>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="espcies" class="mb-2 mr-sm-2">Especie:</label>                                
+                                <select id="petspecies-input"required>
+                                    <option></option>
+                                    <option>Perro</option>
+                                    <option>Gato</option>	
+                                </select>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            
+                            <label for="raza" class="mb-2 mr-sm-2">Raza:</label>                                
+                            <select id="dograza-input" disabled="disabled"required>
+                                <option></option>	
+                            </select>               
+                            <select id="catraza-input" disabled="disabled"required>
+                                <option></option>	
+                            </select>
+
+                            <div class="form-group">
+                                <label for="sex" class="mb-2 mr-sm-2">Sexo:</label>                                
+                                <select id="petsex-input"required>
+                                    <option></option>
+                                    <option>Macho</option>
+                                    <option>Hembra</option>	
+                                </select>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
+                                <select id="petsize-input"required>
+                                    <option></option>
+                                    <option>Miniatura</option>
+                                    <option>Pequeño</option>
+                                    <option>Mediano</option>
+                                    <option>Grande</option>
+                                </select>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
+                                <select id="dangerous-input" required>
+                                    <option></option>
+                                    <option>Si</option>
+                                    <option>No</option>
+                                </select>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="esterilizado" class="mb-2 mr-sm-2">Esterilizado:</label>
+                                <select id="esterilizado-input"required>
+                                    <option></option>
+                                    <option>Si</option>
+                                    <option>No</option>
+                                </select>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="neightbor" class="mb-2 mr-sm-2">Localidad:</label>
+                                <select id="neightbor-input"required>
+                                    <option></option>
+                                    <option>A. NARINO</option>
+                                    <option>B. UNIDOS</option>
+                                    <option>BOSA</option>
+                                    <option>C. BOLIVAR</option>
+                                    <option>CHAPINERO</option>
+                                    <option>ENGATIVA</option>
+                                    <option>FONTIBON</option>
+                                    <option>KENNEDY</option>
+                                    <option>LA CANDELARIA</option>
+                                    <option>LOS MARTIRES</option>
+                                    <option>P. ARANDA</option>
+                                    <option>R. URIBE</option>
+                                    <option>SAN CRISTOBAL</option>
+                                    <option>SANTA FE</option>
+                                    <option>SUBA</option>
+                                    <option>SUMAPAZ</option>
+                                    <option>TEUSAQUILLO</option>
+                                    <option>TUNJUELITO</option>
+                                    <option>USAQUEN</option>
+                                    <option>USME</option>
+                                </select>
+                                <div class="valid-feedback">Validado.</div>
+                                <div class="invalid-feedback">Por favor llene este campo.</div>
+                            </div>
+                            <br/><br/>
+                            <input id="petsave-button"  type="submit"  class="btn btn-outline-success" value="Guardar"/>
+                            <input id="petclean-button" type="reset" class="btn btn-outline-danger"value="Limpiar" />
+                        </form>
+                    </div>
+                </div>
+                <div class="container-fluid">
                 <div class="col-sm-4">
                    <img id="dogimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236"> 
                    <br/><br/>
                    <img id="catimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236">  
                 </div>
-
+                </div>
             </div>
            
         </div>
