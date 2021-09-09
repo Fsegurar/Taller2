@@ -20,8 +20,8 @@
         </div>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" >Ciudadano de 4 Patas</a>
-            <b class="text-secondary">Este es el formulario que debe diligenciar para registrar una nueva mascota</b>
+            <a class="navbar-brand" style="margin-left:20px">   Ciudadano de 4 Patas</a>
+            <b class="text-secondary">   Este es el formulario que debe diligenciar para registrar una nueva mascota</b>
         </nav>
 
         <div class="container" style="margin-top:30px">
@@ -111,9 +111,9 @@
                 </div>
 
                 <div class="col-sm-4">
-                   <img id="dogimage" src="https://cdn2.thecatapi.com/images/N1VNIP3bN.jpg" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+                   <img id="dogimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236"> 
                    <br/><br/>
-                   <img id="catimage" src="https://images.dog.ceo/breeds/retriever-golden/n02099601_3004.jpg" class="rounded" alt="Cinque Terre" width="304" height="236">  
+                   <img id="catimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236">  
                 </div>
 
             </div>
@@ -167,9 +167,9 @@
                         <br/>
                     </div>
                 </div>
-                <div class="table-responsive col-sm-9">
+                <div class="table-responsive col-sm-9 container">
                     <table class="table table-hover">
-                        <thead class="thead-dark ">
+                        <thead class="thead-dark">
                             <tr>
                                 <th class="column-header">Foto</th>
                                 <th class="column-header">Fecha de registro</th>
@@ -186,9 +186,13 @@
                                 <th class="column-header">Acciones</th>
                             </tr>
                         </thead>
+                        <tbody id="body-table">
+
+                        </tbody>
                     </table>
                 </div>
             </div>
         </div>
+        <script src="./js/main.js"></script>
     </body>
 </html>
