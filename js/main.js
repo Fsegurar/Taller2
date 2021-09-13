@@ -2,6 +2,7 @@ var rowId = 0;
 var catBreeds = [];
 var indexedDB = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
 const dbName = "petDB";
+const myLocalStorage = window.localStorage;
 
 fetch("https://dog.ceo/api/breed/retriever/golden/images/random")
     .then(response => response.json())
@@ -59,12 +60,8 @@ request.onsuccess = function(event) {
         console.log(event.target.result);
         rowId = event.target.result.length;
         if(rowId>0){
-            let tr = document.createElement("tr")
-            tr.setAttribute("id", "row-" + rowId);
-            Object.keys(event.target.result).forEach(info => {
-                    console.log(event.target.result[info])
-            });
             for(let i=0;i<rowId;i++){
+                let tr = document.createElement("tr")
                 tr.setAttribute("id", "row-" + (i+1));            
                 let tdimg = document.createElement("td");
                 let img = document.createElement("img");
@@ -72,20 +69,58 @@ request.onsuccess = function(event) {
                 let imagen = myLocalStorage.getItem(i+1)
                 console.log(imagen)
                 img.setAttribute("class","rounded")
-                img.setAttribute("id","img-"+rowId)
+                img.setAttribute("id","img-"+(i+1))
                 img.setAttribute("alt","Cinque Terre")
                 img.setAttribute("width","200" )
                 img.setAttribute("height","156")
                 img.setAttribute("src",imagen)
                 tdimg.appendChild(img);
                 tr.appendChild(tdimg); 
+                let pet= {
+                    dateinput : event.target.result[i].dateinput,                        
+                    ownername: event.target.result[i].ownername,
+                    petname: event.target.result[i].petname,
+                    microchipnum: event.target.result[i].microchipnum,
+                    petage: event.target.result[i].petage,
+                    petspecie: event.target.result[i].petspecie,
+                    petsex: event.target.result[i].petsex,
+                    petsize: event.target.result[i].petsize,
+                    dangerousinput: event.target.result[i].dangerousinput,
+                    esterilizadoinput: event.target.result[i].esterilizadoinput,
+                    neightborinput: event.target.result[i].neightborinput,
+
+                }
+                Object.keys(pet).forEach((key) => {
+                    let td = document.createElement("td");
+                    td.innerHTML= pet[key];
+                    tr.appendChild(td);
+                });
+                let tdActions = document.createElement("td");
+
+                let input = document.createElement("input");
+                input.setAttribute("id", "delete-" + (i+1));
+                input.setAttribute("type", "button");
+                input.value = "Eliminar";
+                input.onclick = function() {
+                    
+                    let id = this.getAttribute("id");
+                    id = +id.replace("delete-", "");
+                    document.getElementById("row-" + id).remove();
+                    var id2 = id-1
+                    console.log(event.target.result[id2])
+                    event.target.result[id2].remove();
+                    
+                    myLocalStorage.removeItem(id)
+                };
+                
+                tdActions.appendChild(input);
+                tr.appendChild(tdActions);
+                document.getElementById("body-table").appendChild(tr);
+                
+                
             }
-            Object.keys(event.target.result).map((info) => {
-                let td = document.createElement("td");
-                td.innerHTML= event.target.result[info];
-                tr.appendChild(td);
-            });
-            document.getElementById("body-table").appendChild(tr);
+           
+            
         }
     };
     
