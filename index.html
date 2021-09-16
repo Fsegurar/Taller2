@@ -7,11 +7,11 @@
 
     </head>
 
-    <body>
+    <body id="Body">
 
         <div class="container">
-            <div class="text-center" style="margin-bottom:0">
-             <h1>Bienvenido<br/>al Programa<br/>Ciudadano de 4 Patas</h1>
+            <div class="text-center jumbotron" style="margin-bottom:0">
+             <h1>Ciudadano de 4 Patas</h1>
              <p> Una campaña para identificar a todos
                 estos miembros de nuestras familias como “Ciudadanos de 4 Patas”. Mediante un
                 microchip que emite una radiofrecuencia, es posible identificar, registrar y realizar
@@ -20,15 +20,13 @@
         </div>
 
         <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-            <a class="navbar-brand" style="margin-left:20px">   Ciudadano de 4 Patas</a>
+            <img  src="./img/pata.png" style="margin-left:20px" width="75" height="75"> 
+            <a class="navbar-brand" style="margin-left:20px">Bienvenid@</a>
             <b class="text-secondary">   Este es el formulario que debe diligenciar para registrar una nueva mascota</b>
         </nav>
-        <div class="row">
-        
-            <div class="container-sm col-sm-6" style="margin-top:30px">
-   
-                
-                    
+        <div class="container" style="margin-left: 10">
+            <div class="row">
+                <div class="container-sm col-sm-6" style="margin-top:30px"> 
                     <form class="needs-validation"   novalidate>
                         <div class="form-group">
                             <label for="date" class="mb-2 mr-sm-2">Fecha de registro:</label>
@@ -67,8 +65,7 @@
                             </select>
                             <div class="valid-feedback">Validado.</div>
                             <div class="invalid-feedback">Por favor llene este campo.</div>
-                        </div>
-                            
+                        </div>        
                         <label for="raza" class="mb-2 mr-sm-2">Raza:</label>                                
                         <select id="dograza-input" disabled="disabled"required>
                             <option></option>	
@@ -76,7 +73,6 @@
                         <select id="catraza-input" disabled="disabled"required>
                             <option></option>	
                         </select>
-
                         <div class="form-group">
                             <label for="sex" class="mb-2 mr-sm-2">Sexo:</label>                                
                             <select id="petsex-input"required>
@@ -99,7 +95,6 @@
                             <div class="valid-feedback">Validado.</div>
                             <div class="invalid-feedback">Por favor llene este campo.</div>
                         </div>
-
                         <div class="form-group">
                             <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
                             <select id="dangerous-input" required>
@@ -110,7 +105,6 @@
                             <div class="valid-feedback">Validado.</div>
                             <div class="invalid-feedback">Por favor llene este campo.</div>
                         </div>
-
                         <div class="form-group">
                             <label for="esterilizado" class="mb-2 mr-sm-2">Esterilizado:</label>
                             <select id="esterilizado-input"required>
@@ -152,95 +146,360 @@
                         <br/><br/>
                         <input id="petsave-button"  type="submit"  class="btn btn-outline-success" value="Guardar"/>
                         <input id="petclean-button" type="reset" class="btn btn-outline-danger"value="Limpiar" />
-                    </form>
-                
-                
-            </div>
-        
-            <div class="container col-sm-4" style="margin-top:30px">
-                
-                <img id="dogimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236"> 
-                <br/><br/>
-                <img id="catimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236">  
-                
-            </div>
-        </div>   
-           
-        
-        <br/><br/>
-        <div class="container" style="margin-left:20px">
-            <div class="row">
-                <div class="col-sm-3">
-                    <div class="container">
-                        <br/><br/><br/><br/><br/><br/>
-                        <p>Filtros</p>
-                        <br/><br/>
-                        Especie <select id="filterespecies-input">
-                            <option>Seleccione</option>
-                            <option>Perro</option>
-                            <option>Gato</option>	
-                        </select>
-                        <br/><br/>
-                        Sexo <select id="filtersex-input">
-                            <option>Seleccione</option>
-                            <option>Macho</option>
-                            <option>Hembra</option>	
-                        </select>
-                        <br/><br/>
-                        Tamaño <select id="filtersize-input">
-                            <option>Seleccione</option>
-                            <option>Miniatura</option>
-                            <option>Pequeño</option>
-                            <option>Mediano</option>
-                            <option>Grande</option>
-                        </select>
-                        <br/><br/>
-                        Microchip <select id="filtermicrochip-input">
-                            <option>Seleccione</option>
-                            <option>Si</option>
-                            <option>No</option>
-                        </select>
-                        <br/><br/>
-                        Peligroso <select id="filterdangeruos-input">
-                            <option>Seleccione</option>
-                            <option>Si</option>
-                            <option>No</option>
-                        </select>
-                        <br/><br/>
-                        Esterilizado <select id="filteresterilizado-input">
-                            <option>Seleccione</option>
-                            <option>Si</option>
-                            <option>No</option>
-                        </select>
-                        <br/>
-                    </div>
+                    </form>                
                 </div>
-                <div class="table-responsive col-sm-9 container">
-                    <table class="table table-hover">
-                        <thead class="thead-dark">
-                            <tr>
-                                <th class="column-header">Foto</th>
-                                <th class="column-header">Fecha de registro</th>
-                                <th class="column-header">Nombre del propietario</th>
-                                <th class="column-header">Nombre de la mascota</th>
-                                <th class="column-header">Numero de Microchip de la mascota</th>
-                                <th class="column-header">Edad</th>
-                                <th class="column-header">Especie</th>
-                                <th class="column-header">Sexo</th>
-                                <th class="column-header">Tamaño</th>
-                                <th class="column-header">Peligroso</th>
-                                <th class="column-header">Esterilizado</th>
-                                <th class="column-header">Localidad</th>
-                                <th class="column-header">Acciones</th>
-                            </tr>
-                        </thead>
-                        <tbody id="body-table">
-
-                        </tbody>
-                    </table>
+                <div class="container col-sm-4" style="margin-top:30px">
+                    <img id="dogimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236"> 
+                    <br/><br/>
+                    <img id="catimage" src="" class="rounded" alt="Cinque Terre" width="304" height="236">  
+                </div>
+            </div>            
+            <br/><br/>
+            <div class="container" style="margin-left:20px">
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="container bg-secondary text-white" style="margin-top: 250;">
+                            <br/><br/>
+                            <p>Filtros</p>
+                            <br/><br/>
+                            Especie <select id="filterespecies-input">
+                                <option>Seleccione</option>
+                                <option>Perro</option>
+                                <option>Gato</option>	
+                            </select>
+                            <br/><br/>
+                            Sexo <select id="filtersex-input">
+                                <option>Seleccione</option>
+                                <option>Macho</option>
+                                <option>Hembra</option>	
+                            </select>
+                            <br/><br/>
+                            Tamaño <select id="filtersize-input">
+                                <option>Seleccione</option>
+                                <option>Miniatura</option>
+                                <option>Pequeño</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                            </select>
+                            <br/><br/>
+                            Microchip <select id="filtermicrochip-input">
+                                <option>Seleccione</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                            <br/><br/>
+                            Peligroso <select id="filterdangeruos-input">
+                                <option>Seleccione</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                            <br/><br/>
+                            Esterilizado <select id="filteresterilizado-input">
+                                <option>Seleccione</option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                            <br/><br/><br/>
+                            <input id="filter-button"  type="button"  class="btn btn-success" value="Filtrar"/>
+                            <input id="cleanfilter-button" type="button" class="btn btn-danger"value="Limpiar" />
+                            <br/><br/>
+                        </div>
+                        <br/><br/>
+                    </div>
+                    <div class="table-responsive col-sm-9 container">
+                        <table class="table table-hover">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th class="column-header">Foto</th>
+                                    <th class="column-header">Fecha de registro</th>
+                                    <th class="column-header">Nombre del propietario</th>
+                                    <th class="column-header">Nombre de la mascota</th>
+                                    <th class="column-header">Numero de Microchip de la mascota</th>
+                                    <th class="column-header">Edad</th>
+                                    <th class="column-header">Especie</th>
+                                    <th class="column-header">Sexo</th>
+                                    <th class="column-header">Tamaño</th>
+                                    <th class="column-header">Peligroso</th>
+                                    <th class="column-header">Esterilizado</th>
+                                    <th class="column-header">Localidad</th>
+                                    <th class="column-header">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody id="body-table">
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="card-footer  bg-dark text-white" style="margin-top: 175;">
+            <br/><br/>
+            <img src="./img/logo-ub.png"  width="229" height="67"> 
+            <br/><br/>
+        </div>
+        <div class="modal" id="case1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2  class="modal-title">Este Formulario permite editar su mascota</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
+                            <select id="size-edit">
+                                <option></option>
+                                <option>Miniatura</option>
+                                <option>Pequeño</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
+                            <select id="dangerous-edit" >
+                                <option></option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="neightbor" class="mb-2 mr-sm-2">Localidad:</label>
+                            <select id="neightbor-edit">
+                                <option></option>
+                                <option>A. NARINO</option>
+                                <option>B. UNIDOS</option>
+                                <option>BOSA</option>
+                                <option>C. BOLIVAR</option>
+                                <option>CHAPINERO</option>
+                                <option>ENGATIVA</option>
+                                <option>FONTIBON</option>
+                                <option>KENNEDY</option>
+                                <option>LA CANDELARIA</option>
+                                <option>LOS MARTIRES</option>
+                                <option>P. ARANDA</option>
+                                <option>R. URIBE</option>
+                                <option>SAN CRISTOBAL</option>
+                                <option>SANTA FE</option>
+                                <option>SUBA</option>
+                                <option>SUMAPAZ</option>
+                                <option>TEUSAQUILLO</option>
+                                <option>TUNJUELITO</option>
+                                <option>USAQUEN</option>
+                                <option>USME</option>
+                            </select>
+                        
+                        </div>
+                        <div class="form-group">
+                            <label for="esterilizado" class="mb-2 mr-sm-2">Esterilizado:</label>
+                            <select id="esterilizado-edit">
+                                <option></option>
+                                <option>Si</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label id="lable-m" for="microchip" > Numero de Microchip de la mascota:</label>
+                            <input id="microchip-edit" type="number" min="0" max="10000000000000" class="form-control mb-2 mr-sm-2" placeholder="Microchip" name="petname"/>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save-edit1" type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                            <button id="close-edit1" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal " id="case2">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2  class="modal-title">Este Formulario permite editar su mascota</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
+                            <select id="size-edit2">
+                                <option></option>
+                                <option>Miniatura</option>
+                                <option>Pequeño</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
+                            <select id="dangerous-edit2" >
+                                <option></option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="neightbor" class="mb-2 mr-sm-2">Localidad:</label>
+                            <select id="neightbor-edit2">
+                                <option></option>
+                                <option>A. NARINO</option>
+                                <option>B. UNIDOS</option>
+                                <option>BOSA</option>
+                                <option>C. BOLIVAR</option>
+                                <option>CHAPINERO</option>
+                                <option>ENGATIVA</option>
+                                <option>FONTIBON</option>
+                                <option>KENNEDY</option>
+                                <option>LA CANDELARIA</option>
+                                <option>LOS MARTIRES</option>
+                                <option>P. ARANDA</option>
+                                <option>R. URIBE</option>
+                                <option>SAN CRISTOBAL</option>
+                                <option>SANTA FE</option>
+                                <option>SUBA</option>
+                                <option>SUMAPAZ</option>
+                                <option>TEUSAQUILLO</option>
+                                <option>TUNJUELITO</option>
+                                <option>USAQUEN</option>
+                                <option>USME</option>
+                            </select>
+                            
+                        </div>
+                        <div class="form-group">
+                            <label id="lable-m" for="microchip" > Numero de Microchip de la mascota:</label>
+                            <input id="microchip-edit2" type="number" min="0" max="10000000000000" class="form-control mb-2 mr-sm-2" placeholder="Microchip" name="petname"/>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save-edit2" type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                            <button id="close-edit2" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="case3">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2  class="modal-title">Este Formulario permite editar su mascota</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
+                            <select id="size-edit3">
+                                <option></option>
+                                <option>Miniatura</option>
+                                <option>Pequeño</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
+                            <select id="dangerous-edit3" >
+                                <option></option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="neightbor" class="mb-2 mr-sm-2">Localidad:</label>
+                            <select id="neightbor-edit3">
+                                <option></option>
+                                <option>A. NARINO</option>
+                                <option>B. UNIDOS</option>
+                                <option>BOSA</option>
+                                <option>C. BOLIVAR</option>
+                                <option>CHAPINERO</option>
+                                <option>ENGATIVA</option>
+                                <option>FONTIBON</option>
+                                <option>KENNEDY</option>
+                                <option>LA CANDELARIA</option>
+                                <option>LOS MARTIRES</option>
+                                <option>P. ARANDA</option>
+                                <option>R. URIBE</option>
+                                <option>SAN CRISTOBAL</option>
+                                <option>SANTA FE</option>
+                                <option>SUBA</option>
+                                <option>SUMAPAZ</option>
+                                <option>TEUSAQUILLO</option>
+                                <option>TUNJUELITO</option>
+                                <option>USAQUEN</option>
+                                <option>USME</option>
+                            </select>
+                           
+                        </div>
+                        <div class="form-group">
+                            <label id="lable-e" for="esterilizado" >Esterilizado:</label>
+                            <select id="esterilizado-edit3">
+                                <option></option>
+                                <option>Si</option>
+                            </select>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save-edit3" type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                            <button id="close-edit3" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="case4">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2  class="modal-title">Este Formulario permite editar su mascota</h2>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label for="size" class="mb-2 mr-sm-2">Tamaño:</label>
+                            <select id="size-edit4">
+                                <option></option>
+                                <option>Miniatura</option>
+                                <option>Pequeño</option>
+                                <option>Mediano</option>
+                                <option>Grande</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="dangerous" class="mb-2 mr-sm-2">Peligroso:</label>
+                            <select id="dangerous-edit4" >
+                                <option></option>
+                                <option>Si</option>
+                                <option>No</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label id="lable-l" for="neightbor" >Localidad:</label>
+                            <select id="neightbor-edit4">
+                                <option></option>
+                                <option>A. NARINO</option>
+                                <option>B. UNIDOS</option>
+                                <option>BOSA</option>
+                                <option>C. BOLIVAR</option>
+                                <option>CHAPINERO</option>
+                                <option>ENGATIVA</option>
+                                <option>FONTIBON</option>
+                                <option>KENNEDY</option>
+                                <option>LA CANDELARIA</option>
+                                <option>LOS MARTIRES</option>
+                                <option>P. ARANDA</option>
+                                <option>R. URIBE</option>
+                                <option>SAN CRISTOBAL</option>
+                                <option>SANTA FE</option>
+                                <option>SUBA</option>
+                                <option>SUMAPAZ</option>
+                                <option>TEUSAQUILLO</option>
+                                <option>TUNJUELITO</option>
+                                <option>USAQUEN</option>
+                                <option>USME</option>
+                            </select>
+                           
+                        </div>
+                        <div class="modal-footer">
+                            <button id="save-edit4" type="button" class="btn btn-success" data-dismiss="modal">Guardar</button>
+                            <button id="close-edit4" type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        
         <script src="./js/main.js"></script>
     </body>
 </html>
